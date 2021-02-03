@@ -1,8 +1,8 @@
-import config from "../config";
+import { API_ENDPOINT } from "../config";
 
 const AamzonApiService = {
   getProducts() {
-    return fetch(`${config.API_ENDPOINT}/products`, {
+    return fetch(`${API_ENDPOINT}/products`, {
       headers: {},
     }).then((res) =>
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
@@ -10,7 +10,7 @@ const AamzonApiService = {
   },
 
   postProductToBasket(item) {
-    return fetch(`${config.API_ENDPOINT}/cart`, {
+    return fetch(`${API_ENDPOINT}/cart`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -22,7 +22,7 @@ const AamzonApiService = {
   },
 
   getProductsInBasket() {
-    return fetch(`${config.API_ENDPOINT}/cart/items`, {
+    return fetch(`${API_ENDPOINT}/cart/items`, {
       headers: {},
     }).then((res) =>
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
@@ -30,7 +30,7 @@ const AamzonApiService = {
   },
 
   deleteItemInBasket(item_id) {
-    return fetch(`${config.API_ENDPOINT}/cart/items/${item_id}`, {
+    return fetch(`${API_ENDPOINT}/cart/items/${item_id}`, {
       method: "DELETE",
       headers: { "content-type": "application/json" },
     }).then((res) =>
@@ -39,7 +39,7 @@ const AamzonApiService = {
   },
 
   postLogin(credentials) {
-    return fetch(`${config.API_ENDPOINT}/auth/login`, {
+    return fetch(`${API_ENDPOINT}/auth/login`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(credentials),
@@ -49,7 +49,7 @@ const AamzonApiService = {
   },
 
   postOrder(newOrder) {
-    return fetch(`${config.API_ENDPOINT}/order/history`, {
+    return fetch(`${API_ENDPOINT}/order/history`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(newOrder),

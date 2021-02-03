@@ -1,4 +1,2 @@
-export default {
-  API_ENDPOINT: "http://localhost:8000/api",
-  TOKEN_KEY: "amazon-client-auth-token",
-};
+export const API_ENDPOINT = "http://localhost:8000/api";
+export const TOKEN_KEY = "amazon-client-auth-token";

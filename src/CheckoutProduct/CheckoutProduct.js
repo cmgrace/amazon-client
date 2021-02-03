@@ -19,9 +19,9 @@ class CheckoutProducts extends Component {
       });
   };
   render() {
-    const { item_id, img_link, title, price, rating, hideButton } = this.props;
+    const { img_link, title, price, rating, hideButton } = this.props;
     return (
-      <div key={item_id} className="checkoutProduct">
+      <div className="checkoutProduct">
         <img
           className="checkoutProduct__image"
           src={img_link}

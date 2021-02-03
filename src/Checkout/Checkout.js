@@ -33,9 +33,9 @@ class Checkout extends Component {
               </h3>
               <h2 className="checkout__title">Your shopping Basket</h2>
 
-              {basket.map((item) => (
+              {basket.map((item, i) => (
                 <CheckoutProduct
-                  key={item.item_id}
+                  key={i}
                   item_id={item.item_id}
                   id={item.product_id}
                   title={item.title}
