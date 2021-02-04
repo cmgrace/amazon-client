@@ -45,14 +45,7 @@ class Product extends Component {
 
         <img src={product.img_link} alt="" />
 
-        <button
-          onClick={
-            //console.log(e.target.value);
-            this.handleClickAddToBasket
-          }
-        >
-          Add to Basket
-        </button>
+        <button onClick={this.handleClickAddToBasket}>Add to Basket</button>
       </div>
     );
   }

@@ -26,26 +26,6 @@ export class ProductProvider extends Component {
     error: null,
   };
 
-  //   componentDidMount() {
-  //     Promise.all([
-  //       fetch(`${config.API_ENDPOINT}/products`),
-  //       fetch(`${config.API_ENDPOINT}/cart/items`),
-  //     ])
-  //       .then(([productListRes, basketListRes]) => {
-  //         if (!productListRes.ok)
-  //           return productListRes.json().then((e) => Promise.reject(e));
-  //         if (!basketListRes.ok)
-  //           return basketListRes.json().then((e) => Promise.reject(e));
-
-  //         return Promise.all([productListRes.json(), basketListRes.json()]);
-  //       })
-  //       .then(([productList, basket]) => {
-  //         this.setState({ productList, basket });
-  //       })
-  //       .catch((error) => {
-  //         console.error({ error });
-  //       });
-  //   }
   componentDidMount() {
     this.clearError();
     AamzonApiService.getProducts()
@@ -79,7 +59,6 @@ export class ProductProvider extends Component {
 
   setItemIdInOrder = (itemIdInOrder) => {
     this.setState({ itemIdInOrder });
-    //console.log(this.state.itemIdInOrder);
   };
 
   getBasketTotal = (basket) => {
