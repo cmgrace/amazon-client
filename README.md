@@ -1,8 +1,10 @@
-# Getting Started with Create React App
+# Amazon-client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Deployment
 
-## Available Scripts
+[https://amazon-client.cmgrace.vercel.app/](https://amazon-client.cmgrace.vercel.app/)
+
+## Main feature
 
 In the project directory, you can run:
 

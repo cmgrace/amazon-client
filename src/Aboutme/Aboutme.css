@@ -1,0 +1,40 @@
+.aboutme {
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutme__logo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  object-fit: contain;
+  width: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.aboutme__container {
+  width: 500px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 2px solid lightgray;
+  padding: 20px;
+}
+
+.aboutme__container > h1 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.aboutme__container > form > h5 {
+  margin-bottom: 5px;
+}
+
+.aboutme__container > p {
+  margin-top: 15px;
+  font-size: 16px;
+}

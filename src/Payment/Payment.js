@@ -4,27 +4,33 @@ import "./Payment.css";
 import Context from "../Context/Context";
 import CheckoutProduct from "../CheckoutProduct/CheckoutProduct";
 import CurrencyFormat from "react-currency-format";
-import AamzonApiService from "../services/amazon-api-service";
+//import AamzonApiService from "../services/amazon-api-service";
 
 class Payment extends Component {
   static contextType = Context;
   state = { error: null };
+  static defaultPorps = {
+    history: {},
+  };
 
   handleClickBuyNow = () => {
-    this.setState({ error: null });
-    const user_id = this.context.user.user_id;
-    const product_id = this.context.basket.map((item) => item.product_id);
-    //console.log(user_id, product_id);
-    const newOrder = {
-      user_id: user_id,
-      product_id: product_id,
-    };
-    AamzonApiService.postOrder(newOrder)
-      // .then((res) => this.context.setItemIdInOrder(res.product_id))
-      .then((res) => console.log(res.product_id))
-      .catch((res) => {
-        this.setState({ error: res.error });
-      });
+    this.props.history.push("/thankyou");
+    this.context.setBasketList("");
+    /*-----------------------under development------------------------*/
+    // this.setState({ error: null });
+    // const user_id = this.context.user.user_id;
+    // const product_id = this.context.basket.map((item) => item.product_id);
+    // //console.log(user_id, product_id);
+    // const newOrder = {
+    //   user_id: user_id,
+    //   product_id: product_id,
+    // };
+    // AamzonApiService.postOrder(newOrder)
+    //   // .then((res) => this.context.setItemIdInOrder(res.product_id))
+    //   .then((res) => console.log(res.product_id))
+    //   .catch((res) => {
+    //     this.setState({ error: res.error });
+    //   });
   };
 
   render() {
