@@ -3,8 +3,7 @@
   display: flex;
   align-items: center;
   background-color: #131921;
-
-  top: auto;
+  top: 0;
   z-index: 100;
 }
 .header__logo {

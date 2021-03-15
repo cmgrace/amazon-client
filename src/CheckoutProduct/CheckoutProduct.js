@@ -11,7 +11,7 @@ class CheckoutProducts extends Component {
 
     AamzonApiService.deleteItemInBasket(item_id)
       .then((item) => {
-        console.log("item need to delete:", item[0].item_id);
+        //console.log("item need to delete:", item[0].item_id);
         this.context.removeItemFromBasket(item[0].item_id);
       })
       .catch((error) => {
