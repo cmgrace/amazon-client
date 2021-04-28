@@ -6,7 +6,7 @@ import Context from "../Context/Context";
 import AamzonApiService from "../services/amazon-api-service";
 
 class Checkout extends Component {
-  static defaultPorps = {
+  static defaultProps = {
     history: { push: () => {} },
   };
   static contextType = Context;

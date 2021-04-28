@@ -64,6 +64,7 @@ class Login extends Component {
             <input
               type="text"
               id="user_email"
+              placeholder="Demo User See Below"
               value={this.state.email}
               onChange={(e) => this.updateUserName(e.target.value)}
             />
@@ -72,6 +73,7 @@ class Login extends Component {
             <input
               type="password"
               id="user_password"
+              placeholder="Use Demo Password"
               value={this.state.password}
               onChange={(e) => this.updateUserPassword(e.target.value)}
             />
@@ -81,6 +83,13 @@ class Login extends Component {
             </button>
           </form>
 
+          <p>
+            <strong>
+              Demo User email: dunder@gmail.com
+              <br />
+              Demo Password: password
+            </strong>
+          </p>
           <p>
             By signing-in you agree to the AMAZON FAKE CLONE Conditions of Use &
             Sale. Please see our Privacy Notice, our Cookies Notice and our
